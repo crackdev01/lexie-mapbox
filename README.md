@@ -5,7 +5,7 @@ React application to plot the coordinates on a map using Mapbox
 ## Requirements
 - Download this repository and change directory to `lexie-mapbox/`
 - Run the following code to install dependencies:
-
+- `npm install`
 ## Enabling Mapbox Access
 
 - [Mapbox Account](https://account.mapbox.com/) - Create free account to generate default access token.
