@@ -1,6 +1,5 @@
 import React from 'react';
 import Map from './components/Map';
-
 import { shallow } from 'enzyme';
 
 describe("rendering components", () => {
@@ -10,6 +9,7 @@ describe("rendering components", () => {
 
         expect(wrapper.contains(mapContainer)).toEqual(true);
     });
+    
     it("renders Map button", () => {
       const wrapper = shallow(<Map />, { disableLifecycleMethods: true })
       const button = wrapper.find('#display_button');

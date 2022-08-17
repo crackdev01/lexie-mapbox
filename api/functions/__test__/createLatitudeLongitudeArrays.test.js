@@ -1,6 +1,5 @@
 const createLatitudeLongitudeArrays = require("../createLatitudeLongitudeArrays");
 
-// test data
 const jsonData = {
   "coordinate0": {
     "lng": "-73.9876",
@@ -8,13 +7,11 @@ const jsonData = {
   }
 }
 
-// run function
 const arrays = [];
 const [latitudeArray, longitudeArray] = createLatitudeLongitudeArrays(jsonData);
 arrays.push(latitudeArray);
 arrays.push(longitudeArray);
 
-// run tests
 describe("createLatitudeLongitudeArrays", () => {
   it("asserts data types and length of return arrays are equal to amount of coordinates from given param", () => {
     const jsonDataLength = Object.keys(jsonData).length;
@@ -25,7 +22,6 @@ describe("createLatitudeLongitudeArrays", () => {
     }
   });
   it("asserts the latitude, longitude values from JSON data are being split correctly into the return arrays respectively", () => {
-    // convert number to string
     const latitudeString = latitudeArray[0].toString();
     const longitudeString = longitudeArray[0].toString();
 

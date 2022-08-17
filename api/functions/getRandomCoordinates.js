@@ -8,7 +8,6 @@ const getRandomCoordinates = (
 
   // Create random coordinates
   for (let i = 0; i < coordinateAmount; i++) {
-    // Calculate randomness
     const longitude = calculateRandomFloatFromArray(
       longitudeBoundaries[0],
       longitudeBoundaries[1]
@@ -18,13 +17,11 @@ const getRandomCoordinates = (
       latitudeBoundaries[0]
     );
 
-    // build coordinate data
     const coordinate = {
       lng: longitude.toFixed(DECIMAL_PLACES),
       lat: latitude.toFixed(DECIMAL_PLACES),
     };
 
-    // add coordinate to collection of coordinates
     coordinates[i] = coordinate;
   }
   return coordinates;

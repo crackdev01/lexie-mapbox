@@ -1,14 +1,14 @@
-const createLatitudeLongitudeArrays = require('./functions/createLatitudeLongitudeArrays');
-const getRandomCoordinates = require('./functions/getRandomCoordinates');
-
 require('dotenv').config();
-const config = require('./config');
 const express = require('express');
+const cors = require('cors');
 const {
   body,
   validationResult
 } = require('express-validator');
-const cors = require('cors');
+const createLatitudeLongitudeArrays = require('./functions/createLatitudeLongitudeArrays');
+const getRandomCoordinates = require('./functions/getRandomCoordinates');
+const config = require('./config');
+
 const app = express();
 const port = process.env.API_PORT || config.PORT;
 
